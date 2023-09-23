@@ -76,7 +76,12 @@
     <!-- Modal -->
     <div class="modal" id="myModal">
         <div class="modal-content">
-            <p>Will you help teach me how to implement this blog template into On Approval?</p>
+           const response = await openai.createImage({
+  prompt: "a white siamese cat",
+  n: 1,
+  size: "1024x1024",
+});
+image_url = response.data.data[0].url;
             <a class="modal-close" id="closeModal" href="https://vercel.com/templates/next.js/stablo-blog">Click here</a>
         </div>
     </div>
