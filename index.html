@@ -50,22 +50,21 @@
     <button class="cta" onclick="showImage()">Yes Chef</button>
     <button class="cta" onclick="redirectToYT()">No Chef</button>
 
-    <div id="modal">
+    <div id="modal" onclick="hideImage()">
         <div id="modalContent">
-            <img id="chefImage" src="" alt="Chef Image" style="width: 100%;">
+            <img id="chefImage" src="DIRECT_IMAGE_LINK_HERE" alt="Chef Image" style="width: 100%;">
         </div>
     </div>
 
     <script>
         function showImage() {
             const modal = document.getElementById("modal");
-            const image = document.getElementById("chefImage");
-            image.src = "https://images.app.goo.gl/P1S7zGHVRfJk54H99";
             modal.style.display = "block";
+        }
 
-            modal.onclick = function() {
-                modal.style.display = "none";
-            }
+        function hideImage() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
         }
 
         function redirectToYT() {
