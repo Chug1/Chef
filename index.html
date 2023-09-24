@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI Image Prompt</title>
+    <title>Chef's Choice</title>
     <style>
         body {
             background-color: gray;
             color: white;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            text-align: center;
+            margin-top: 50px;
         }
 
-        .cta-button {
-            padding: 10px 15px;
-            margin: 5px;
+        .cta {
+            padding: 10px 20px;
+            margin: 20px;
             border: none;
-            background-color: black;
-            color: white;
             cursor: pointer;
+            transition: 0.3s;
         }
 
-        .popup {
+        .cta:hover {
+            background-color: darkgray;
+        }
+
+        #modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-            justify-content: center;
-            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .popup-content {
-            background-color: white;
-            color: black;
+        #modalContent {
+            margin: 10% auto;
             padding: 20px;
-            border-radius: 10px;
+            background-color: white;
+            width: 50%;
         }
     </style>
 </head>
+
 <body>
-    <button class="cta-button" onclick="getSiameseCat()">Yes</button>
-    <button class="cta-button" onclick="showChefError()">No</button>
 
-    <div id="image-popup" class="popup">
-        <div class="popup-content">
-            <img id="cat-image" src="" alt="Siamese Cat" width="300">
+    <button class="cta" onclick="showImage()">Yes Chef</button>
+    <button class="cta" onclick="redirectToYT()">No Chef</button>
+
+    <div id="modal">
+        <div id="modalContent">
+            <img id="chefImage" src="" alt="Chef Image" style="width: 100%;">
         </div>
     </div>
 
-    <div id="error-popup" class="popup">
-        <div class="popup-content">
-            Chef Error
-        </div>
-    </div>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
