@@ -56,7 +56,22 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function showImage() {
+            const modal = document.getElementById("modal");
+            const image = document.getElementById("chefImage");
+            image.src = "https://images.app.goo.gl/P1S7zGHVRfJk54H99";
+            modal.style.display = "block";
+
+            modal.onclick = function() {
+                modal.style.display = "none";
+            }
+        }
+
+        function redirectToYT() {
+            window.location.href = "https://www.youtube.com/shorts/STIdSpZK0gk";
+        }
+    </script>
 </body>
 
 </html>
